@@ -10,8 +10,6 @@ exports.create = (req, res) => {
     });
     return;
   }
-
-  // Create a Tutorial
   const tutorial = {
     title: req.body.title,
     description: req.body.description,
@@ -138,7 +136,7 @@ exports.deleteAll = (req, res) => {
 };
 
 
-// Find all published Tutorials
+// Find all published
 exports.findAllPublished = (req, res) => {
   Tutorial.findAll({ where: { published: true } })
     .then(data => {
